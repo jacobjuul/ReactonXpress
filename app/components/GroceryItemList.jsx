@@ -1,26 +1,24 @@
 var React = require('react');
+var GroceryItem = require('./GroceryItem.jsx');
 
 var GroceryItemList = React.createClass({
-    render: function(){
-        return (
-            <div>
-                <h1>Grocery listify</h1>
-                    <div>
-                    { 
-                        this.props.items.map(function(item, index){
-                            return  (
-                                <div>
-                                    {item.name}
-                                </div>
-                                )
-                        })
-
-                    }
-                    </div>
-               
-            </div>
-        )
-    }
-})
+  render: function(){
+    return (
+      <div>
+        <h1>Grocery listifys</h1>
+        <div>
+          <ul>
+            {this.props.items.map(function(item, index){
+              return  (
+                <GroceryItem key={"item" + index} item={item} />
+                )
+              })
+            }
+          </ul>
+        </div>
+      </div>
+      )
+  }
+});
 
 module.exports = GroceryItemList;
