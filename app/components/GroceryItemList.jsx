@@ -1,5 +1,6 @@
 var React = require('react');
 var GroceryItem = require('./GroceryItem.jsx');
+var GroceryListAddItem = require('./GroceryListAddItem.jsx');
 
 var GroceryItemList = React.createClass({
   render: function(){
@@ -16,6 +17,7 @@ var GroceryItemList = React.createClass({
             }
           </ul>
         </div>
+        <GroceryListAddItem />
       </div>
       )
   }
